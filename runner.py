@@ -13,8 +13,8 @@ def key_press_fn(event):
 
 robot = Robot(write=True)
 
-recorder = VideoRecorder(enabled=False)
-camera = CameraStream(capture_number=0, width=800, height=500, enabled=False)
+recorder = VideoRecorder(enabled=True)
+camera = CameraStream(capture_number=1, width=800, height=500, enabled=True)
 viewer = CameraViewer(enable_trackbar=False, enabled=False)
 
 map_size_pixels = 1600
