@@ -13,9 +13,9 @@ def key_press_fn(event):
 
 robot = Robot(write=True)
 
-recorder = VideoRecorder(enabled=True)
+recorder = VideoRecorder(enabled=True, directory="videos")
 camera = CameraStream(capture_number=1, width=800, height=500, enabled=True)
-viewer = CameraViewer(enable_trackbar=False, enabled=False)
+viewer = CameraViewer(enable_trackbar=False, enabled=True)
 
 map_size_pixels = 1600
 map_size_meters = 50
