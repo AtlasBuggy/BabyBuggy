@@ -103,16 +103,10 @@ Thumbs.db
 .idea/
 .pioenvs/
 .sconsign.dblite/
-Images
-Images/
-Videos
-Videos/
 videos
 videos/
-images
-images/
-depth_models/
-depth_models
+maps/
+converted/
 
 # ML files #
 ############

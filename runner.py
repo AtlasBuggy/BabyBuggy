@@ -13,7 +13,7 @@ def key_press_fn(event):
 
 robot = Robot(write=True)
 
-recorder = VideoRecorder(enabled=True, directory="videos/2017_Sep_29")
+recorder = VideoRecorder(enabled=True, directory="videos/2017_Oct_01")
 camera = CameraStream(capture_number=1, width=800, height=500, enabled=True)
 viewer = CameraViewer(enable_trackbar=False, enabled=True)
 
