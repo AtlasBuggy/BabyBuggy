@@ -1,9 +1,11 @@
+import os
 from atlasbuggy import Robot
 from atlasbuggy.subscriptions import *
 from atlasbuggy.camera import CameraViewer, CameraStream, VideoRecorder
 from atlasbuggy.plotters import LivePlotter
 
 from lms200 import LMS200, Slam
+from babybuggy import BabyBuggySerial
 
 
 def key_press_fn(event):
@@ -13,9 +15,11 @@ def key_press_fn(event):
 
 robot = Robot(write=True)
 
-recorder = VideoRecorder(enabled=True, directory="videos/2017_Oct_01")
+todays_folder = os.path.split(robot.log_info["directory"])[-1]
+recorder = VideoRecorder(enabled=True, directory=os.path.join("videos", todays_folder))
 camera = CameraStream(capture_number=1, width=800, height=500, enabled=True)
 viewer = CameraViewer(enable_trackbar=False, enabled=True)
+serial = BabyBuggySerial()
 
 map_size_pixels = 3200
 map_size_meters = 500
@@ -31,4 +35,4 @@ viewer.subscribe(Update(viewer.capture_tag, camera))
 slam.subscribe(Feed(slam.lms_tag, sicklms))
 slam.subscribe(Subscription(slam.plotter_tag, plotter))
 
-robot.run(viewer, recorder, camera, sicklms, plotter, slam)
+robot.run(viewer, recorder, camera, sicklms, plotter, slam, serial)
