@@ -45,8 +45,12 @@ robot = Robot(write=False)
 serial_manager = BabyBuggySerial()
 sensor_plotter = SensorPlotter()
 
+file_name = "2017_Oct_07/05;31;55.log.xz"
+
 plotter = LivePlotter(2, sensor_plotter.imu_plot, sensor_plotter.gps_plot, default_resize_behavior=False)
+log_parser = LogParser(file_name, "logs", update_rate=0.005)
 
 sensor_plotter.subscribe(Subscription(sensor_plotter.serial_manager_tag, serial_manager))
+log_parser.subscribe(Subscription(serial_manager.name, serial_manager))
 
-robot.run(serial_manager, plotter, sensor_plotter)
+robot.run(log_parser, plotter, sensor_plotter)
