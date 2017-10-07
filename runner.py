@@ -28,7 +28,7 @@ map_size_pixels = 3200
 map_size_meters = 500
 
 sicklms = LMS200("/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller-if00-port0",
-                 enabled=enable_lidar, log_level=10)
+                 enabled=enable_lidar, log_level=20)
 slam = Slam(map_size_pixels, map_size_meters, write_image=False, enabled=False, perform_slam=False, plot_slam=False)
 plotter = LivePlotter(2, matplotlib_events=dict(key_press_event=key_press_fn), enabled=False)
 
