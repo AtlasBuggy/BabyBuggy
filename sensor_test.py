@@ -6,7 +6,7 @@ from atlasbuggy.plotters import RobotPlot, LivePlotter
 from babybuggy import BabyBuggySerial
 
 
-class ImuPlotter(AsyncStream):
+class SensorPlotter(AsyncStream):
     def __init__(self, enabled=True):
         super(ImuPlotter, self).__init__(enabled)
 
@@ -17,6 +17,7 @@ class ImuPlotter(AsyncStream):
         self.l = 1
 
         self.imu_plot = RobotPlot("imu output", x_range=[-self.l, self.l], y_range=[-self.l, self.l])
+        self.gps_plot = RobotPlot("gps output")
 
     def take(self, subscriptions):
         self.serial_manager = subscriptions[self.serial_manager_tag].get_stream()
@@ -30,17 +31,22 @@ class ImuPlotter(AsyncStream):
             x1 = -self.l * math.cos(angle)
             y1 = -self.l * math.sin(angle)
 
+            latitude = self.serial_manager.gps.latitude_deg
+            longitude = self.serial_manager.gps.longitude_deg
+
             self.imu_plot.update([x0, x1], [y0, y1])
+            self.gps_plot.append(latitude, longitude)
+
             await asyncio.sleep(0.01)
 
 
 robot = Robot(write=False)
 
 serial_manager = BabyBuggySerial()
-imu_display = ImuPlotter()
+sensor_plotter = SensorPlotter()
 
-plotter = LivePlotter(1, imu_display.imu_plot, default_resize_behavior=False)
+plotter = LivePlotter(2, sensor_plotter.imu_plot, sensor_plotter.gps_plot, default_resize_behavior=False)
 
-imu_display.subscribe(Subscription(imu_display.serial_manager_tag, serial_manager))
+sensor_plotter.subscribe(Subscription(sensor_plotter.serial_manager_tag, serial_manager))
 
-robot.run(serial_manager, plotter, imu_display)
+robot.run(serial_manager, plotter, sensor_plotter)
