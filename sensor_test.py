@@ -2,13 +2,14 @@ import math
 from atlasbuggy import Robot, AsyncStream
 from atlasbuggy.subscriptions import *
 from atlasbuggy.plotters import RobotPlot, LivePlotter
+from atlasbuggy.logparser import LogParser
 
 from babybuggy import BabyBuggySerial
 
 
 class SensorPlotter(AsyncStream):
     def __init__(self, enabled=True):
-        super(ImuPlotter, self).__init__(enabled)
+        super(SensorPlotter, self).__init__(enabled)
 
         self.serial_manager = None
         self.serial_manager_tag = "serial"
@@ -35,7 +36,9 @@ class SensorPlotter(AsyncStream):
             longitude = self.serial_manager.gps.longitude_deg
 
             self.imu_plot.update([x0, x1], [y0, y1])
-            self.gps_plot.append(latitude, longitude)
+
+            if self.serial_manager.gps.is_position_valid():
+                self.gps_plot.append(latitude, longitude)
 
             await asyncio.sleep(0.01)
 
@@ -48,7 +51,7 @@ sensor_plotter = SensorPlotter()
 file_name = "2017_Oct_07/05;31;55.log.xz"
 
 plotter = LivePlotter(2, sensor_plotter.imu_plot, sensor_plotter.gps_plot, default_resize_behavior=False)
-log_parser = LogParser(file_name, "logs", update_rate=0.005)
+log_parser = LogParser(file_name, "logs", update_rate=0.0)
 
 sensor_plotter.subscribe(Subscription(sensor_plotter.serial_manager_tag, serial_manager))
 log_parser.subscribe(Subscription(serial_manager.name, serial_manager))
