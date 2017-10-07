@@ -19,8 +19,8 @@ map_size_meters = 500
 file_name = "2017_Oct_07/05;31;55.log.xz"
 
 sicklms = LmsSimulator()
-slam = Slam(map_size_pixels, map_size_meters, write_image=True, enabled=True, perform_slam=True, plot_slam=True)
-plotter = LivePlotter(2, matplotlib_events=dict(key_press_event=key_press_fn))
+slam = Slam(map_size_pixels, map_size_meters, write_image=True, enabled=True, perform_slam=True, plot_slam=False)
+plotter = LivePlotter(2, matplotlib_events=dict(key_press_event=key_press_fn), close_when_finished=True)
 log_parser = LogParser(file_name, "logs", update_rate=0.0)
 
 slam.subscribe(Feed(slam.lms_tag, sicklms))
