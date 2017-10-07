@@ -4,10 +4,10 @@ from .gps import GPS
 
 
 class BabyBuggySerial(SerialStream):
-    def __init__(self):
+    def __init__(self, enabled=True):
         self.imu = IMU()
         self.gps = GPS()
-        super(BabyBuggySerial, self).__init__(self.imu, self.gps)
+        super(BabyBuggySerial, self).__init__(self.imu, self.gps, enabled=enabled)
 
         self.link_callback(self.imu, self.received_imu)
         self.link_callback(self.gps, self.received_gps)
