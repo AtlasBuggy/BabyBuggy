@@ -36,6 +36,7 @@ recorder.subscribe(Feed(recorder.capture_tag, camera))
 viewer.subscribe(Update(viewer.capture_tag, camera))
 
 slam.subscribe(Feed(slam.lms_tag, sicklms))
+slam.subscribe(Feed(slam.odometry_tag, serial))
 slam.subscribe(Subscription(slam.plotter_tag, plotter))
 
 robot.run(serial, viewer, recorder, camera, plotter, sicklms, slam)
