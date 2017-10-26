@@ -42,7 +42,6 @@ class SensorPlotter(AsyncStream):
 
             await asyncio.sleep(0.01)
 
-
 robot = Robot(write=False)
 
 serial_manager = BabyBuggySerial()
