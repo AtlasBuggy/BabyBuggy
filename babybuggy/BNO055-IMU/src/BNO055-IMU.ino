@@ -39,11 +39,14 @@ void updateIMU() {
     // - VECTOR_LINEARACCEL   - m/s^2
     // - VECTOR_GRAVITY       - m/s^2
 
+    Serial.print("t");
+    Serial.print(millis());
+
     #ifdef INCLUDE_FILTERED_DATA
     imu::Vector<3> euler = bno.getVector(Adafruit_BNO055::VECTOR_EULER);
 
     // xyz is yaw pitch roll for some reason... switching roll pitch yaw
-    Serial.print("ex");
+    Serial.print("\tex");
     Serial.print(euler.z(), 4);
     Serial.print("\tey");
     Serial.print(euler.y(), 4);
@@ -53,11 +56,7 @@ void updateIMU() {
 
     imu::Vector<3> mag = bno.getVector(Adafruit_BNO055::VECTOR_MAGNETOMETER);
 
-    #ifdef INCLUDE_FILTERED_DATA
     Serial.print("\tmx");
-    #else
-    Serial.print("mx");
-    #endif
     Serial.print(mag.x(), 4);
     Serial.print("\tmy");
     Serial.print(mag.y(), 4);
@@ -134,12 +133,9 @@ void setup() {
 
   delay(1000);
 
-  /* Display the current temperature */
-  // int8_t temp = bno.getTemp();
-  // Serial.print("Current Temperature: ");
-  // Serial.print(temp);
-  // Serial.println(" C");
-  // Serial.println("");
+  String temperature = String(bno.getTemp());
+  
+  robot.setInitData(temperature);
 
   bno.setExtCrystalUse(true);
 

@@ -108,9 +108,8 @@ void setup()
     delay(50);
 
     String hz = String(GPS_UPDATE_RATE_HZ);
-    String baud = String(GPS_BAUD_RATE);
 
-    robot.setInitData(hz + "\t" + baud);
+    robot.setInitData(hz);
 }
 
 
