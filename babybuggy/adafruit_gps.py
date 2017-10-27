@@ -136,7 +136,10 @@ class AdafruitGPS(Arduino):
                 message.altitude = float(subsegments[2])
                 message.satellites = int(subsegments[3])
 
-        message.calculate_timestamp()
+        try:
+            message.calculate_timestamp()
+        except ValueError as error:
+            self.logger.warning("Invalid message '%s'\n%s" % (message, error))
 
         return message
 
