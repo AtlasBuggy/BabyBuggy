@@ -4,9 +4,9 @@ from avi_to_mp4 import AVItoMP4converter
 from multiprocessing import Value, Lock, cpu_count
 
 converted_ext = ".mp4"
-converted_dir = "converted"
+converted_dir = "../converted"
 raw_ext = ".avi"
-raw_dir = "videos"
+raw_dir = "../videos"
 
 
 class ProcessManager:
@@ -104,7 +104,7 @@ def convert_raw_videos():
     t0 = time.time()
     converted_paths = find_converted_paths()
     paths_to_convert = []
-    print(converted_paths)
+    print("paths already converted:", converted_paths)
     for dirpath, dirnames, filenames in os.walk(raw_dir):
         for filename in filenames:
             if filename.endswith(raw_ext):
@@ -118,7 +118,7 @@ def convert_raw_videos():
                 if converted_path not in converted_paths:
 
                     if not os.path.isdir(directory):
-                        os.mkdir(directory)
+                        os.makedirs(directory)
 
                     paths_to_convert.append((path, converted_path))
 

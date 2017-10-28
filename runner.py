@@ -1,22 +1,32 @@
 import os
-from babybuggy.adafruit_gps import AdafruitGPS
-from babybuggy.bno055 import BNO055
+import argparse
 
 from lms200 import Slam, LMS200
 from atlasbuggy import Orchestrator, run
 from atlasbuggy.opencv import OpenCVCamera, OpenCVRecorder, OpenCVViewer
 
+from babybuggy.adafruit_gps import AdafruitGPS
+from babybuggy.bno055 import BNO055
+
 map_size_pixels = 1600
 map_size_meters = 50
 
+parser = argparse.ArgumentParser()
+parser.add_argument("-l", "--log", help="disable logging", action="store_false")
+parser.add_argument("-r", "--record", help="record video at the start", action="store_true")
+args = parser.parse_args()
+
+log = args.log
+
 enable_arduinos = True
 enable_camera = True
-enable_video_recording = True
+enable_video_recording = log
 enable_lidar = True
+
 
 class BabyBuggy(Orchestrator):
     def __init__(self, event_loop):
-        self.set_default(write=True)
+        self.set_default(write=log)
         super(BabyBuggy, self).__init__(event_loop)
 
         video_file_name = self.file_name[:-3] + "avi"
@@ -29,7 +39,7 @@ class BabyBuggy(Orchestrator):
             # "/dev/cu.usbserial"
             enabled=enable_lidar
         )
-        slam = Slam(map_size_pixels, map_size_meters, write_image=True, enabled=enable_lidar)
+        slam = Slam(map_size_pixels, map_size_meters, write_image=log, enabled=enable_lidar)
         OpenCVCamera.ignore_capture_numbers(0)
         camera = OpenCVCamera(capture_number=1, enabled=enable_camera)
         recorder = OpenCVRecorder(video_file_name, video_directory, enabled=enable_video_recording)
