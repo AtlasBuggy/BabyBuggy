@@ -82,7 +82,6 @@ target/
 
 # Logs and databases #
 ######################
-*.log
 *.sql
 *.sqlite
 

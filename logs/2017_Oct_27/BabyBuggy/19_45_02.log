@@ -1,0 +1,78 @@
+[BabyBuggy @ factory.py:85][DEBUG] 2017-10-27 19:45:02,279: Logging to: logs/2017_Oct_27/BabyBuggy/19_45_02.log
+[BabyBuggy @ orchestrator.py:229][INFO] 2017-10-27 19:45:02,320: 'Slam' is subscribing to 'LMS200' with the tag 'lms'
+[BabyBuggy @ orchestrator.py:229][INFO] 2017-10-27 19:45:02,320: 'OpenCVRecorder' is subscribing to 'OpenCVCamera' with the tag 'capture'
+[BabyBuggy @ orchestrator.py:108][DEBUG] 2017-10-27 19:45:02,321: Adding setup tasks. Apply subscriptions
+[BabyBuggy @ orchestrator.py:114][DEBUG] 2017-10-27 19:45:02,322: Running set up tasks (7). [<babybuggy.bno055.BNO055 object at 0x7fadcd5b70>, <babybuggy.adafruit_gps.AdafruitGPS object at 0x7f8cfd6b00>, <lms200.lms200.LMS200 object at 0x7f8cfdf5c0>, <atlasbuggy.opencv.camera.OpenCVCamera object at 0x7f8cffe828>, <atlasbuggy.opencv.recorder.OpenCVRecorder object at 0x7f8cffe9b0>, <lms200.slam.Slam object at 0x7f8cffe438>] and orchestrator setup
+[BabyBuggy @ orchestrator.py:68][INFO] 2017-10-27 19:45:02,322: setup
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:45:09,455: Cancelling <Task finished coro=<Orchestrator.setup() done, defined at /usr/lib/python3.5/asyncio/coroutines.py:204> result=None>: False
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:45:09,456: Cancelling <Task finished coro=<Arduino.setup() done, defined at /usr/local/lib/python3.5/dist-packages/atlasbuggy/device/arduino.py:52> result=None>: False
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:45:09,456: Cancelling <Task finished coro=<Arduino.setup() done, defined at /usr/local/lib/python3.5/dist-packages/atlasbuggy/device/arduino.py:52> exception=KeyError('Adafruit-GPS',)>: False
+[BabyBuggy @ orchestrator.py:141][ERROR] 2017-10-27 19:45:09,460: Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/atlasbuggy/orchestrator.py", line 137, in check_task_result
+    raise task.exception()
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 239, in _step
+    result = coro.send(None)
+  File "/usr/local/lib/python3.5/dist-packages/atlasbuggy/device/arduino.py", line 54, in setup
+    self.configure_device()
+  File "/usr/local/lib/python3.5/dist-packages/atlasbuggy/device/arduino.py", line 88, in configure_device
+    device_port_info = Arduino.ports[self.whoiam]
+KeyError: 'Adafruit-GPS'
+
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:45:09,461: Cancelling <Task finished coro=<LMS200.setup() done, defined at /usr/local/lib/python3.5/dist-packages/lms200/lms200.py:70> result=None>: False
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:45:09,461: Cancelling <Task finished coro=<OpenCVCamera.setup() done, defined at /usr/lib/python3.5/asyncio/coroutines.py:204> result=None>: False
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:45:09,462: Cancelling <Task finished coro=<OpenCVRecorder.setup() done, defined at /usr/lib/python3.5/asyncio/coroutines.py:204> result=None>: False
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:45:09,462: Cancelling <Task finished coro=<Node.setup() done, defined at /usr/lib/python3.5/asyncio/coroutines.py:204> result=None>: False
+[BabyBuggy @ orchestrator.py:120][DEBUG] 2017-10-27 19:45:09,462: Adding loop tasks
+[BabyBuggy @ orchestrator.py:126][DEBUG] 2017-10-27 19:45:09,464: Running loop tasks (7)
+[BabyBuggy @ orchestrator.py:146][DEBUG] 2017-10-27 19:47:03,672: 7 tasks to cancel
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,673: Cancelling <Task pending coro=<Orchestrator.loop() running at /usr/local/lib/python3.5/dist-packages/atlasbuggy/orchestrator.py:73> wait_for=<Future cancelled> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,674: Cancelling <Task cancelling coro=<BNO055.loop() running at /media/nvidia/JetsonSSD/code/TestBed/babybuggy/bno055.py:133> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,674: Cancelling <Task cancelling coro=<AdafruitGPS.loop() running at /media/nvidia/JetsonSSD/code/TestBed/babybuggy/adafruit_gps.py:98> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,675: Cancelling <Task pending coro=<LMS200.loop() running at /usr/local/lib/python3.5/dist-packages/lms200/lms200.py:140> wait_for=<Future cancelled> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,675: Cancelling <Task cancelling coro=<OpenCVCamera.loop() running at /usr/local/lib/python3.5/dist-packages/atlasbuggy/opencv/camera.py:247> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,676: Cancelling <Task pending coro=<OpenCVRecorder.loop() running at /usr/local/lib/python3.5/dist-packages/atlasbuggy/opencv/recorder.py:162> wait_for=<Future cancelled> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,676: Cancelling <Task pending coro=<Slam.loop() running at /usr/local/lib/python3.5/dist-packages/lms200/slam.py:130> wait_for=<Future cancelled> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:146][DEBUG] 2017-10-27 19:47:03,677: 7 tasks to cancel
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,677: Cancelling <Task cancelling coro=<Orchestrator.loop() running at /usr/local/lib/python3.5/dist-packages/atlasbuggy/orchestrator.py:73> wait_for=<Future cancelled> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,677: Cancelling <Task cancelling coro=<BNO055.loop() running at /media/nvidia/JetsonSSD/code/TestBed/babybuggy/bno055.py:133> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,678: Cancelling <Task cancelling coro=<AdafruitGPS.loop() running at /media/nvidia/JetsonSSD/code/TestBed/babybuggy/adafruit_gps.py:98> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,678: Cancelling <Task cancelling coro=<LMS200.loop() running at /usr/local/lib/python3.5/dist-packages/lms200/lms200.py:140> wait_for=<Future cancelled> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,678: Cancelling <Task cancelling coro=<OpenCVCamera.loop() running at /usr/local/lib/python3.5/dist-packages/atlasbuggy/opencv/camera.py:247> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,678: Cancelling <Task cancelling coro=<OpenCVRecorder.loop() running at /usr/local/lib/python3.5/dist-packages/atlasbuggy/opencv/recorder.py:162> wait_for=<Future cancelled> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,679: Cancelling <Task cancelling coro=<Slam.loop() running at /usr/local/lib/python3.5/dist-packages/lms200/slam.py:130> wait_for=<Future cancelled> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:146][DEBUG] 2017-10-27 19:47:03,679: 7 tasks to cancel
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,679: Cancelling <Task cancelling coro=<Orchestrator.loop() running at /usr/local/lib/python3.5/dist-packages/atlasbuggy/orchestrator.py:73> wait_for=<Future cancelled> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,680: Cancelling <Task cancelling coro=<BNO055.loop() running at /media/nvidia/JetsonSSD/code/TestBed/babybuggy/bno055.py:133> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,680: Cancelling <Task cancelling coro=<AdafruitGPS.loop() running at /media/nvidia/JetsonSSD/code/TestBed/babybuggy/adafruit_gps.py:98> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,680: Cancelling <Task cancelling coro=<LMS200.loop() running at /usr/local/lib/python3.5/dist-packages/lms200/lms200.py:140> wait_for=<Future cancelled> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,681: Cancelling <Task cancelling coro=<OpenCVCamera.loop() running at /usr/local/lib/python3.5/dist-packages/atlasbuggy/opencv/camera.py:247> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,681: Cancelling <Task cancelling coro=<OpenCVRecorder.loop() running at /usr/local/lib/python3.5/dist-packages/atlasbuggy/opencv/recorder.py:162> wait_for=<Future cancelled> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,681: Cancelling <Task cancelling coro=<Slam.loop() running at /usr/local/lib/python3.5/dist-packages/lms200/slam.py:130> wait_for=<Future cancelled> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:146][DEBUG] 2017-10-27 19:47:03,682: 7 tasks to cancel
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,682: Cancelling <Task cancelling coro=<Orchestrator.loop() running at /usr/local/lib/python3.5/dist-packages/atlasbuggy/orchestrator.py:73> wait_for=<Future cancelled> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,682: Cancelling <Task cancelling coro=<BNO055.loop() running at /media/nvidia/JetsonSSD/code/TestBed/babybuggy/bno055.py:133> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,683: Cancelling <Task cancelling coro=<AdafruitGPS.loop() running at /media/nvidia/JetsonSSD/code/TestBed/babybuggy/adafruit_gps.py:98> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,683: Cancelling <Task cancelling coro=<LMS200.loop() running at /usr/local/lib/python3.5/dist-packages/lms200/lms200.py:140> wait_for=<Future cancelled> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,683: Cancelling <Task cancelling coro=<OpenCVCamera.loop() running at /usr/local/lib/python3.5/dist-packages/atlasbuggy/opencv/camera.py:247> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,684: Cancelling <Task cancelling coro=<OpenCVRecorder.loop() running at /usr/local/lib/python3.5/dist-packages/atlasbuggy/opencv/recorder.py:162> wait_for=<Future cancelled> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,684: Cancelling <Task cancelling coro=<Slam.loop() running at /usr/local/lib/python3.5/dist-packages/lms200/slam.py:130> wait_for=<Future cancelled> cb=[_wait.<locals>._on_completion() at /usr/lib/python3.5/asyncio/tasks.py:414]>: True
+[BabyBuggy @ orchestrator.py:248][INFO] 2017-10-27 19:47:03,686: loop finished
+[BabyBuggy @ orchestrator.py:252][INFO] 2017-10-27 19:47:03,686: closing orchestrator
+[BabyBuggy @ orchestrator.py:146][DEBUG] 2017-10-27 19:47:03,686: 7 tasks to cancel
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,687: Cancelling <Task cancelled coro=<Orchestrator.loop() done, defined at /usr/local/lib/python3.5/dist-packages/atlasbuggy/orchestrator.py:70>>: False
+[BabyBuggy @ orchestrator.py:134][DEBUG] 2017-10-27 19:47:03,687: Task '<Task cancelled coro=<Orchestrator.loop() done, defined at /usr/local/lib/python3.5/dist-packages/atlasbuggy/orchestrator.py:70>>' was cancelled
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,687: Cancelling <Task cancelled coro=<BNO055.loop() done, defined at /media/nvidia/JetsonSSD/code/TestBed/babybuggy/bno055.py:124>>: False
+[BabyBuggy @ orchestrator.py:134][DEBUG] 2017-10-27 19:47:03,688: Task '<Task cancelled coro=<BNO055.loop() done, defined at /media/nvidia/JetsonSSD/code/TestBed/babybuggy/bno055.py:124>>' was cancelled
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,688: Cancelling <Task cancelled coro=<AdafruitGPS.loop() done, defined at /media/nvidia/JetsonSSD/code/TestBed/babybuggy/adafruit_gps.py:86>>: False
+[BabyBuggy @ orchestrator.py:134][DEBUG] 2017-10-27 19:47:03,688: Task '<Task cancelled coro=<AdafruitGPS.loop() done, defined at /media/nvidia/JetsonSSD/code/TestBed/babybuggy/adafruit_gps.py:86>>' was cancelled
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,688: Cancelling <Task cancelled coro=<LMS200.loop() done, defined at /usr/local/lib/python3.5/dist-packages/lms200/lms200.py:118>>: False
+[BabyBuggy @ orchestrator.py:134][DEBUG] 2017-10-27 19:47:03,689: Task '<Task cancelled coro=<LMS200.loop() done, defined at /usr/local/lib/python3.5/dist-packages/lms200/lms200.py:118>>' was cancelled
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,689: Cancelling <Task cancelled coro=<OpenCVCamera.loop() done, defined at /usr/local/lib/python3.5/dist-packages/atlasbuggy/opencv/camera.py:228>>: False
+[BabyBuggy @ orchestrator.py:134][DEBUG] 2017-10-27 19:47:03,689: Task '<Task cancelled coro=<OpenCVCamera.loop() done, defined at /usr/local/lib/python3.5/dist-packages/atlasbuggy/opencv/camera.py:228>>' was cancelled
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,689: Cancelling <Task cancelled coro=<OpenCVRecorder.loop() done, defined at /usr/local/lib/python3.5/dist-packages/atlasbuggy/opencv/recorder.py:152>>: False
+[BabyBuggy @ orchestrator.py:134][DEBUG] 2017-10-27 19:47:03,690: Task '<Task cancelled coro=<OpenCVRecorder.loop() done, defined at /usr/local/lib/python3.5/dist-packages/atlasbuggy/opencv/recorder.py:152>>' was cancelled
+[BabyBuggy @ orchestrator.py:131][DEBUG] 2017-10-27 19:47:03,690: Cancelling <Task cancelled coro=<Slam.loop() done, defined at /usr/local/lib/python3.5/dist-packages/lms200/slam.py:96>>: False
+[BabyBuggy @ orchestrator.py:134][DEBUG] 2017-10-27 19:47:03,690: Task '<Task cancelled coro=<Slam.loop() done, defined at /usr/local/lib/python3.5/dist-packages/lms200/slam.py:96>>' was cancelled
+[BabyBuggy @ orchestrator.py:89][INFO] 2017-10-27 19:47:03,690: halting
+[BabyBuggy @ orchestrator.py:92][INFO] 2017-10-27 19:47:03,691: Session took 121.41061162948608s to complete
+[BabyBuggy @ orchestrator.py:78][INFO] 2017-10-27 19:47:03,695: teardown
