@@ -1,0 +1,262 @@
+[AdafruitGPS @ factory.py:85][DEBUG] 2017-10-28 06:24:22,349: Logging to: logs/2017_Oct_28/AdafruitGPS/06_24_22.log
+[AdafruitGPS @ arduino.py:86][INFO] 2017-10-28 06:24:27,146: configuring done. Finding whoiam=Adafruit-GPS
+[AdafruitGPS @ arduino.py:147][INFO] 2017-10-28 06:24:27,179: Device named 'Adafruit-GPS' at '/dev/ttyUSB1' is now at baud rate '9600'
+[AdafruitGPS @ arduino.py:157][INFO] 2017-10-28 06:24:27,179: Device has started!
+[AdafruitGPS @ arduino.py:158][INFO] 2017-10-28 06:24:27,180: init packet: 5	9600
+[AdafruitGPS @ adafruit_gps.py:142][WARNING] 2017-10-28 06:24:29,286: Invalid message 'AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.0 0/0/200; timestamp: 1509186267.5145826'
+month must be in 1..12
+[AdafruitGPS @ adafruit_gps.py:142][WARNING] 2017-10-28 06:24:29,317: Invalid message 'AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.0 0/0/200; timestamp: 1509186267.715811'
+month must be in 1..12
+[AdafruitGPS @ adafruit_gps.py:142][WARNING] 2017-10-28 06:24:29,324: Invalid message 'AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.0 0/0/200; timestamp: 1509186267.9169178'
+month must be in 1..12
+[AdafruitGPS @ adafruit_gps.py:142][WARNING] 2017-10-28 06:24:29,356: Invalid message 'AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.0 0/0/200; timestamp: 1509186268.117735'
+month must be in 1..12
+[AdafruitGPS @ adafruit_gps.py:142][WARNING] 2017-10-28 06:24:29,391: Invalid message 'AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.42 0/0/200; timestamp: 1509186268.3182888'
+month must be in 1..12
+[AdafruitGPS @ arduino.py:186][INFO] 2017-10-28 06:24:30,340: found 15 packets in 3s (avg=5.0 packets/sec). 15 received in total (avg=4.7 packets/sec)
+[AdafruitGPS @ arduino.py:186][INFO] 2017-10-28 06:24:33,350: found 15 packets in 3s (avg=5.0 packets/sec). 30 received in total (avg=4.9 packets/sec)
+[AdafruitGPS @ arduino.py:186][INFO] 2017-10-28 06:24:36,365: found 15 packets in 3s (avg=5.0 packets/sec). 45 received in total (avg=4.9 packets/sec)
+[AdafruitGPS @ arduino.py:186][INFO] 2017-10-28 06:24:39,380: found 15 packets in 3s (avg=5.0 packets/sec). 60 received in total (avg=4.9 packets/sec)
+[AdafruitGPS @ arduino.py:186][INFO] 2017-10-28 06:24:42,394: found 15 packets in 3s (avg=5.0 packets/sec). 75 received in total (avg=4.9 packets/sec)
+[AdafruitGPS @ arduino.py:186][INFO] 2017-10-28 06:24:45,406: found 15 packets in 3s (avg=5.0 packets/sec). 90 received in total (avg=4.9 packets/sec)
+[AdafruitGPS @ arduino.py:186][INFO] 2017-10-28 06:24:48,420: found 15 packets in 3s (avg=5.0 packets/sec). 105 received in total (avg=4.9 packets/sec)
+[AdafruitGPS @ arduino.py:186][INFO] 2017-10-28 06:24:51,435: found 15 packets in 3s (avg=5.0 packets/sec). 120 received in total (avg=4.9 packets/sec)
+[AdafruitGPS @ node.py:79][DEBUG] 2017-10-28 06:24:51,475: [log buffer start]
+[DEBUG, 1509186267.5145826]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.0 0/0/200; timestamp: 1509186267.5145826
+[DEBUG, 1509186267.715811]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.0 0/0/200; timestamp: 1509186267.715811
+[DEBUG, 1509186267.9169178]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.0 0/0/200; timestamp: 1509186267.9169178
+[DEBUG, 1509186268.117735]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.0 0/0/200; timestamp: 1509186268.117735
+[DEBUG, 1509186268.3182888]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.42 0/0/200; timestamp: 1509186268.3182888
+[DEBUG, 1509186268.5193179]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.42 5/1/2080; timestamp: 3471742782.796
+[DEBUG, 1509186268.7247844]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.42 5/1/2080; timestamp: 3471742782.796
+[DEBUG, 1509186268.927565]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.42 5/1/2080; timestamp: 3471742782.796
+[DEBUG, 1509186269.1286068]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.42 5/1/2080; timestamp: 3471742782.796
+[DEBUG, 1509186269.3288264]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.43 5/1/2080; timestamp: 3471742783.796
+[DEBUG, 1509186269.5273473]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.43 5/1/2080; timestamp: 3471742783.796
+[DEBUG, 1509186269.7258852]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.43 5/1/2080; timestamp: 3471742783.796
+[DEBUG, 1509186269.924286]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.43 5/1/2080; timestamp: 3471742783.796
+[DEBUG, 1509186270.1325974]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.43 5/1/2080; timestamp: 3471742783.796
+[DEBUG, 1509186270.339673]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.44 5/1/2080; timestamp: 3471742784.796
+[DEBUG, 1509186270.537437]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.44 5/1/2080; timestamp: 3471742784.796
+[DEBUG, 1509186270.74554]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.44 5/1/2080; timestamp: 3471742784.796
+[DEBUG, 1509186270.9438465]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.44 5/1/2080; timestamp: 3471742784.796
+[DEBUG, 1509186271.141497]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.44 5/1/2080; timestamp: 3471742784.796
+[DEBUG, 1509186271.3490279]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.45 5/1/2080; timestamp: 3471742785.781
+[DEBUG, 1509186271.5467675]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.45 5/1/2080; timestamp: 3471742785.781
+[DEBUG, 1509186271.745194]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.45 5/1/2080; timestamp: 3471742785.781
+[DEBUG, 1509186271.9425135]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.45 5/1/2080; timestamp: 3471742785.781
+[DEBUG, 1509186272.150159]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.45 5/1/2080; timestamp: 3471742785.781
+[DEBUG, 1509186272.34911]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.46 5/1/2080; timestamp: 3471742786.796
+[DEBUG, 1509186272.548518]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.46 5/1/2080; timestamp: 3471742786.796
+[DEBUG, 1509186272.745815]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.46 5/1/2080; timestamp: 3471742786.796
+[DEBUG, 1509186272.9547274]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.46 5/1/2080; timestamp: 3471742786.796
+[DEBUG, 1509186273.1529906]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.46 5/1/2080; timestamp: 3471742786.796
+[DEBUG, 1509186273.3505888]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.47 5/1/2080; timestamp: 3471742787.781
+[DEBUG, 1509186273.552423]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.47 5/1/2080; timestamp: 3471742787.781
+[DEBUG, 1509186273.7496202]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.47 5/1/2080; timestamp: 3471742787.781
+[DEBUG, 1509186273.957653]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.47 5/1/2080; timestamp: 3471742787.781
+[DEBUG, 1509186274.1564631]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.47 5/1/2080; timestamp: 3471742787.781
+[DEBUG, 1509186274.3638496]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.48 5/1/2080; timestamp: 3471742788.796
+[DEBUG, 1509186274.5615304]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.48 5/1/2080; timestamp: 3471742788.796
+[DEBUG, 1509186274.7590454]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.48 5/1/2080; timestamp: 3471742788.796
+[DEBUG, 1509186274.9574735]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.48 5/1/2080; timestamp: 3471742788.796
+[DEBUG, 1509186275.1558547]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.48 5/1/2080; timestamp: 3471742788.796
+[DEBUG, 1509186275.36431]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.49 5/1/2080; timestamp: 3471742789.781
+[DEBUG, 1509186275.5621948]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.49 5/1/2080; timestamp: 3471742789.781
+[DEBUG, 1509186275.7599182]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.49 5/1/2080; timestamp: 3471742789.781
+[DEBUG, 1509186275.9682882]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.49 5/1/2080; timestamp: 3471742789.781
+[DEBUG, 1509186276.1665733]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.49 5/1/2080; timestamp: 3471742789.781
+[DEBUG, 1509186276.365067]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.50 5/1/2080; timestamp: 3471742790.796
+[DEBUG, 1509186276.5627947]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.50 5/1/2080; timestamp: 3471742790.796
+[DEBUG, 1509186276.763373]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.50 5/1/2080; timestamp: 3471742790.796
+[DEBUG, 1509186276.97118]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.50 5/1/2080; timestamp: 3471742790.796
+[DEBUG, 1509186277.1690955]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.50 5/1/2080; timestamp: 3471742790.796
+[DEBUG, 1509186277.3669708]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.51 5/1/2080; timestamp: 3471742791.796
+[DEBUG, 1509186277.5741131]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.51 5/1/2080; timestamp: 3471742791.796
+[DEBUG, 1509186277.7730448]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.51 5/1/2080; timestamp: 3471742791.796
+[DEBUG, 1509186277.9722557]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.51 5/1/2080; timestamp: 3471742791.796
+[DEBUG, 1509186278.1698885]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.51 5/1/2080; timestamp: 3471742791.796
+[DEBUG, 1509186278.3771462]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.52 5/1/2080; timestamp: 3471742792.796
+[DEBUG, 1509186278.5771217]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.52 5/1/2080; timestamp: 3471742792.796
+[DEBUG, 1509186278.7751992]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.52 5/1/2080; timestamp: 3471742792.796
+[DEBUG, 1509186278.9831958]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.52 5/1/2080; timestamp: 3471742792.796
+[DEBUG, 1509186279.182089]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.52 5/1/2080; timestamp: 3471742792.796
+[DEBUG, 1509186279.3798409]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.53 5/1/2080; timestamp: 3471742793.781
+[DEBUG, 1509186279.578837]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.53 5/1/2080; timestamp: 3471742793.781
+[DEBUG, 1509186279.7774448]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.53 5/1/2080; timestamp: 3471742793.781
+[DEBUG, 1509186279.987061]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.53 5/1/2080; timestamp: 3471742793.781
+[DEBUG, 1509186280.1857765]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.53 5/1/2080; timestamp: 3471742793.781
+[DEBUG, 1509186280.3829787]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.54 5/1/2080; timestamp: 3471742794.796
+[DEBUG, 1509186280.5907094]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.54 5/1/2080; timestamp: 3471742794.796
+[DEBUG, 1509186280.7892041]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.54 5/1/2080; timestamp: 3471742794.796
+[DEBUG, 1509186280.9867957]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.54 5/1/2080; timestamp: 3471742794.796
+[DEBUG, 1509186281.1942356]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.54 5/1/2080; timestamp: 3471742794.796
+[DEBUG, 1509186281.3915253]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.55 5/1/2080; timestamp: 3471742795.796
+[DEBUG, 1509186281.589471]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.55 5/1/2080; timestamp: 3471742795.796
+[DEBUG, 1509186281.7995338]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.55 5/1/2080; timestamp: 3471742795.796
+[DEBUG, 1509186281.9967666]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.55 5/1/2080; timestamp: 3471742795.796
+[DEBUG, 1509186282.1936874]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.55 5/1/2080; timestamp: 3471742795.796
+[DEBUG, 1509186282.3944004]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.56 5/1/2080; timestamp: 3471742796.796
+[DEBUG, 1509186282.5919476]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.56 5/1/2080; timestamp: 3471742796.796
+[DEBUG, 1509186282.7987204]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.56 5/1/2080; timestamp: 3471742796.796
+[DEBUG, 1509186282.9953158]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.56 5/1/2080; timestamp: 3471742796.796
+[DEBUG, 1509186283.2023969]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.56 5/1/2080; timestamp: 3471742796.796
+[DEBUG, 1509186283.4017534]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.57 5/1/2080; timestamp: 3471742797.781
+[DEBUG, 1509186283.5997686]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.57 5/1/2080; timestamp: 3471742797.781
+[DEBUG, 1509186283.8073153]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.57 5/1/2080; timestamp: 3471742797.781
+[DEBUG, 1509186284.0029948]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.57 5/1/2080; timestamp: 3471742797.781
+[DEBUG, 1509186284.2014241]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.57 5/1/2080; timestamp: 3471742797.781
+[DEBUG, 1509186284.4087298]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.58 5/1/2080; timestamp: 3471742798.796
+[DEBUG, 1509186284.605845]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.58 5/1/2080; timestamp: 3471742798.796
+[DEBUG, 1509186284.8029826]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.58 5/1/2080; timestamp: 3471742798.796
+[DEBUG, 1509186285.010689]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.58 5/1/2080; timestamp: 3471742798.796
+[DEBUG, 1509186285.2081776]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.58 5/1/2080; timestamp: 3471742798.796
+[DEBUG, 1509186285.4063885]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.59 5/1/2080; timestamp: 3471742799.796
+[DEBUG, 1509186285.6143935]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.59 5/1/2080; timestamp: 3471742799.796
+[DEBUG, 1509186285.8114233]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.59 5/1/2080; timestamp: 3471742799.796
+[DEBUG, 1509186286.0189705]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.59 5/1/2080; timestamp: 3471742799.796
+[DEBUG, 1509186286.215852]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 23:59.59 5/1/2080; timestamp: 3471742799.796
+[DEBUG, 1509186286.4124455]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.0 6/1/2080; timestamp: 3471742800.8
+[DEBUG, 1509186286.6099415]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.0 6/1/2080; timestamp: 3471742800.8
+[DEBUG, 1509186286.8182945]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.0 6/1/2080; timestamp: 3471742800.8
+[DEBUG, 1509186287.01544]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.0 6/1/2080; timestamp: 3471742800.8
+[DEBUG, 1509186287.214862]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.0 6/1/2080; timestamp: 3471742800.8
+[DEBUG, 1509186287.4134138]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.1 6/1/2080; timestamp: 3471742801.8
+[DEBUG, 1509186287.6212156]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.1 6/1/2080; timestamp: 3471742801.8
+[DEBUG, 1509186287.8184924]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.1 6/1/2080; timestamp: 3471742801.8
+[DEBUG, 1509186288.0152452]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.1 6/1/2080; timestamp: 3471742801.8
+[DEBUG, 1509186288.2237537]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.1 6/1/2080; timestamp: 3471742801.8
+[DEBUG, 1509186288.4199889]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.2 6/1/2080; timestamp: 3471742802.799
+[DEBUG, 1509186288.6185355]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.2 6/1/2080; timestamp: 3471742802.799
+[DEBUG, 1509186288.8259678]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.2 6/1/2080; timestamp: 3471742802.799
+[DEBUG, 1509186289.0232258]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.2 6/1/2080; timestamp: 3471742802.799
+[DEBUG, 1509186289.2208123]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.2 6/1/2080; timestamp: 3471742802.799
+[DEBUG, 1509186289.429232]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.3 6/1/2080; timestamp: 3471742803.799
+[DEBUG, 1509186289.6262794]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.3 6/1/2080; timestamp: 3471742803.799
+[DEBUG, 1509186289.823548]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.3 6/1/2080; timestamp: 3471742803.799
+[DEBUG, 1509186290.0310597]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.3 6/1/2080; timestamp: 3471742803.799
+[DEBUG, 1509186290.228425]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.3 6/1/2080; timestamp: 3471742803.799
+[DEBUG, 1509186290.4355838]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.4 6/1/2080; timestamp: 3471742804.8
+[DEBUG, 1509186290.6344144]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.4 6/1/2080; timestamp: 3471742804.8
+[DEBUG, 1509186290.831304]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.4 6/1/2080; timestamp: 3471742804.8
+[DEBUG, 1509186291.029964]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.4 6/1/2080; timestamp: 3471742804.8
+[DEBUG, 1509186291.237089]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.4 6/1/2080; timestamp: 3471742804.8
+[DEBUG, 1509186291.4351146]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.5 6/1/2080; timestamp: 3471742805.8
+[log buffer end]
+[AdafruitGPS @ node.py:81][DEBUG] 2017-10-28 06:24:51,476: logging message buffer (len=16447)
+[AdafruitGPS @ arduino.py:186][INFO] 2017-10-28 06:24:54,452: found 15 packets in 3s (avg=5.0 packets/sec). 135 received in total (avg=5.0 packets/sec)
+[AdafruitGPS @ arduino.py:186][INFO] 2017-10-28 06:24:57,464: found 15 packets in 3s (avg=5.0 packets/sec). 150 received in total (avg=5.0 packets/sec)
+[AdafruitGPS @ arduino.py:186][INFO] 2017-10-28 06:25:00,479: found 15 packets in 3s (avg=5.0 packets/sec). 165 received in total (avg=5.0 packets/sec)
+[AdafruitGPS @ arduino.py:186][INFO] 2017-10-28 06:25:03,500: found 15 packets in 3s (avg=5.0 packets/sec). 180 received in total (avg=5.0 packets/sec)
+[AdafruitGPS @ arduino.py:186][INFO] 2017-10-28 06:25:06,510: found 15 packets in 3s (avg=5.0 packets/sec). 195 received in total (avg=5.0 packets/sec)
+[AdafruitGPS @ arduino.py:186][INFO] 2017-10-28 06:25:09,542: found 15 packets in 3s (avg=5.0 packets/sec). 210 received in total (avg=5.0 packets/sec)
+[AdafruitGPS @ arduino.py:186][INFO] 2017-10-28 06:25:12,559: found 15 packets in 3s (avg=5.0 packets/sec). 225 received in total (avg=5.0 packets/sec)
+[AdafruitGPS @ node.py:79][DEBUG] 2017-10-28 06:25:12,598: [log buffer start]
+[DEBUG, 1509186291.63374]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.5 6/1/2080; timestamp: 3471742805.8
+[DEBUG, 1509186291.841196]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.5 6/1/2080; timestamp: 3471742805.8
+[DEBUG, 1509186292.0384572]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.5 6/1/2080; timestamp: 3471742805.8
+[DEBUG, 1509186292.2462118]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.5 6/1/2080; timestamp: 3471742805.8
+[DEBUG, 1509186292.443943]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.6 6/1/2080; timestamp: 3471742806.8
+[DEBUG, 1509186292.6409264]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.6 6/1/2080; timestamp: 3471742806.8
+[DEBUG, 1509186292.8486707]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.6 6/1/2080; timestamp: 3471742806.8
+[DEBUG, 1509186293.0456994]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.6 6/1/2080; timestamp: 3471742806.8
+[DEBUG, 1509186293.2463875]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.7 6/1/2080; timestamp: 3471742807.8
+[DEBUG, 1509186293.4465835]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.7 6/1/2080; timestamp: 3471742807.8
+[DEBUG, 1509186293.6550622]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.7 6/1/2080; timestamp: 3471742807.8
+[DEBUG, 1509186293.851384]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.7 6/1/2080; timestamp: 3471742807.8
+[DEBUG, 1509186294.0480993]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.7 6/1/2080; timestamp: 3471742807.8
+[DEBUG, 1509186294.2547235]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.8 6/1/2080; timestamp: 3471742808.8
+[DEBUG, 1509186294.4522684]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.8 6/1/2080; timestamp: 3471742808.8
+[DEBUG, 1509186294.652398]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.8 6/1/2080; timestamp: 3471742808.8
+[DEBUG, 1509186294.859811]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.8 6/1/2080; timestamp: 3471742808.8
+[DEBUG, 1509186295.056575]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.8 6/1/2080; timestamp: 3471742808.8
+[DEBUG, 1509186295.253669]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.9 6/1/2080; timestamp: 3471742809.8
+[DEBUG, 1509186295.461398]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.9 6/1/2080; timestamp: 3471742809.8
+[DEBUG, 1509186295.6586406]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.9 6/1/2080; timestamp: 3471742809.8
+[DEBUG, 1509186295.8558044]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.9 6/1/2080; timestamp: 3471742809.8
+[DEBUG, 1509186296.063375]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.9 6/1/2080; timestamp: 3471742809.8
+[DEBUG, 1509186296.2596705]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.10 6/1/2080; timestamp: 3471742810.8
+[DEBUG, 1509186296.4665601]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.10 6/1/2080; timestamp: 3471742810.8
+[DEBUG, 1509186296.6639843]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.10 6/1/2080; timestamp: 3471742810.8
+[DEBUG, 1509186296.8628078]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.10 6/1/2080; timestamp: 3471742810.8
+[DEBUG, 1509186297.0704625]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.10 6/1/2080; timestamp: 3471742810.8
+[DEBUG, 1509186297.2678163]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.11 6/1/2080; timestamp: 3471742811.8
+[DEBUG, 1509186297.4642978]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.11 6/1/2080; timestamp: 3471742811.8
+[DEBUG, 1509186297.672782]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.11 6/1/2080; timestamp: 3471742811.8
+[DEBUG, 1509186297.8703291]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.11 6/1/2080; timestamp: 3471742811.8
+[DEBUG, 1509186298.0671885]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.11 6/1/2080; timestamp: 3471742811.8
+[DEBUG, 1509186298.2750401]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.12 6/1/2080; timestamp: 3471742812.8
+[DEBUG, 1509186298.474045]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.12 6/1/2080; timestamp: 3471742812.8
+[DEBUG, 1509186298.6707127]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.12 6/1/2080; timestamp: 3471742812.8
+[DEBUG, 1509186298.8786027]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.12 6/1/2080; timestamp: 3471742812.8
+[DEBUG, 1509186299.0755382]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.12 6/1/2080; timestamp: 3471742812.8
+[DEBUG, 1509186299.2728226]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.13 6/1/2080; timestamp: 3471742813.8
+[DEBUG, 1509186299.4820542]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.13 6/1/2080; timestamp: 3471742813.8
+[DEBUG, 1509186299.6789744]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.13 6/1/2080; timestamp: 3471742813.8
+[DEBUG, 1509186299.8769233]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.13 6/1/2080; timestamp: 3471742813.8
+[DEBUG, 1509186300.0839915]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.13 6/1/2080; timestamp: 3471742813.8
+[DEBUG, 1509186300.2810168]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.14 6/1/2080; timestamp: 3471742814.798
+[DEBUG, 1509186300.4793036]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.14 6/1/2080; timestamp: 3471742814.798
+[DEBUG, 1509186300.6878862]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.14 6/1/2080; timestamp: 3471742814.798
+[DEBUG, 1509186300.8851943]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.14 6/1/2080; timestamp: 3471742814.798
+[DEBUG, 1509186301.0820856]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.14 6/1/2080; timestamp: 3471742814.798
+[DEBUG, 1509186301.289024]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.15 6/1/2080; timestamp: 3471742815.798
+[DEBUG, 1509186301.4847362]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.15 6/1/2080; timestamp: 3471742815.798
+[DEBUG, 1509186301.6929]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.15 6/1/2080; timestamp: 3471742815.798
+[DEBUG, 1509186301.8913672]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.15 6/1/2080; timestamp: 3471742815.798
+[DEBUG, 1509186302.087895]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.15 6/1/2080; timestamp: 3471742815.798
+[DEBUG, 1509186302.2896528]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.16 6/1/2080; timestamp: 3471742816.798
+[DEBUG, 1509186302.488322]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.16 6/1/2080; timestamp: 3471742816.798
+[DEBUG, 1509186302.696393]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.16 6/1/2080; timestamp: 3471742816.798
+[DEBUG, 1509186302.8949308]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.16 6/1/2080; timestamp: 3471742816.798
+[DEBUG, 1509186303.0920498]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.16 6/1/2080; timestamp: 3471742816.798
+[DEBUG, 1509186303.2920187]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.17 6/1/2080; timestamp: 3471742817.798
+[DEBUG, 1509186303.5006201]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.17 6/1/2080; timestamp: 3471742817.798
+[DEBUG, 1509186303.6985273]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.17 6/1/2080; timestamp: 3471742817.798
+[DEBUG, 1509186303.8963587]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.17 6/1/2080; timestamp: 3471742817.798
+[DEBUG, 1509186304.1035242]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.17 6/1/2080; timestamp: 3471742817.798
+[DEBUG, 1509186304.300072]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.18 6/1/2080; timestamp: 3471742818.798
+[DEBUG, 1509186304.497837]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.18 6/1/2080; timestamp: 3471742818.798
+[DEBUG, 1509186304.7053974]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.18 6/1/2080; timestamp: 3471742818.798
+[DEBUG, 1509186304.9020383]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.18 6/1/2080; timestamp: 3471742818.798
+[DEBUG, 1509186305.108655]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.18 6/1/2080; timestamp: 3471742818.798
+[DEBUG, 1509186305.3062947]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.19 6/1/2080; timestamp: 3471742819.798
+[DEBUG, 1509186305.5041888]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.19 6/1/2080; timestamp: 3471742819.798
+[DEBUG, 1509186305.7120016]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.19 6/1/2080; timestamp: 3471742819.798
+[DEBUG, 1509186305.9083643]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.19 6/1/2080; timestamp: 3471742819.798
+[DEBUG, 1509186306.1054904]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.19 6/1/2080; timestamp: 3471742819.798
+[DEBUG, 1509186306.3132508]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.20 6/1/2080; timestamp: 3471742820.798
+[DEBUG, 1509186306.5099745]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.20 6/1/2080; timestamp: 3471742820.798
+[DEBUG, 1509186306.7180307]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.20 6/1/2080; timestamp: 3471742820.798
+[DEBUG, 1509186306.915439]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.20 6/1/2080; timestamp: 3471742820.798
+[DEBUG, 1509186307.1121726]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.20 6/1/2080; timestamp: 3471742820.798
+[DEBUG, 1509186307.3194304]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.21 6/1/2080; timestamp: 3471742821.798
+[DEBUG, 1509186307.5164354]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.21 6/1/2080; timestamp: 3471742821.798
+[DEBUG, 1509186307.7135816]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.21 6/1/2080; timestamp: 3471742821.798
+[DEBUG, 1509186307.9201627]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.21 6/1/2080; timestamp: 3471742821.798
+[DEBUG, 1509186308.1175535]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.21 6/1/2080; timestamp: 3471742821.798
+[DEBUG, 1509186308.3251276]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.22 6/1/2080; timestamp: 3471742822.798
+[DEBUG, 1509186308.5226827]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.22 6/1/2080; timestamp: 3471742822.798
+[DEBUG, 1509186308.7205594]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.22 6/1/2080; timestamp: 3471742822.798
+[DEBUG, 1509186308.928747]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.22 6/1/2080; timestamp: 3471742822.798
+[DEBUG, 1509186309.1273134]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.22 6/1/2080; timestamp: 3471742822.798
+[DEBUG, 1509186309.3346994]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.23 6/1/2080; timestamp: 3471742823.798
+[DEBUG, 1509186309.542271]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.23 6/1/2080; timestamp: 3471742823.798
+[DEBUG, 1509186309.7407134]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.23 6/1/2080; timestamp: 3471742823.798
+[DEBUG, 1509186309.9377396]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.23 6/1/2080; timestamp: 3471742823.798
+[DEBUG, 1509186310.1452796]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.23 6/1/2080; timestamp: 3471742823.798
+[DEBUG, 1509186310.3414369]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.24 6/1/2080; timestamp: 3471742824.798
+[DEBUG, 1509186310.5386307]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.24 6/1/2080; timestamp: 3471742824.798
+[DEBUG, 1509186310.7461712]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.24 6/1/2080; timestamp: 3471742824.798
+[DEBUG, 1509186310.9439793]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.24 6/1/2080; timestamp: 3471742824.798
+[DEBUG, 1509186311.1419072]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.24 6/1/2080; timestamp: 3471742824.798
+[DEBUG, 1509186311.3520625]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.25 6/1/2080; timestamp: 3471742825.798
+[DEBUG, 1509186311.5609355]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.25 6/1/2080; timestamp: 3471742825.798
+[DEBUG, 1509186311.757793]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.25 6/1/2080; timestamp: 3471742825.798
+[DEBUG, 1509186311.9553099]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.25 6/1/2080; timestamp: 3471742825.798
+[DEBUG, 1509186312.1634626]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.25 6/1/2080; timestamp: 3471742825.798
+[DEBUG, 1509186312.3605459]: AdafruitGPSMessage(fix: False, quality: 0, satellites: 0; time: 0:0.26 6/1/2080; timestamp: 3471742826.798
+[log buffer end]
+[AdafruitGPS @ node.py:81][DEBUG] 2017-10-28 06:25:12,598: logging message buffer (len=14043)
+[AdafruitGPS @ node.py:102][INFO] 2017-10-28 06:25:12,598: Node took 46.84789276123047s to run
+[AdafruitGPS @ generic.py:64][INFO] 2017-10-28 06:25:12,602: Tearing down device

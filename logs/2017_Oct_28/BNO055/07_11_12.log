@@ -1,0 +1,30 @@
+[BNO055 @ factory.py:85][DEBUG] 2017-10-28 07:11:12,474: Logging to: logs/2017_Oct_28/BNO055/07_11_12.log
+[BNO055 @ arduino.py:76][INFO] 2017-10-28 07:11:12,516: configuring for the first time. whoiam=BNO055-IMU
+[BNO055 @ arduino.py:79][INFO] 2017-10-28 07:11:12,528: Found suitable addresses: '['/dev/ttyUSB2', '/dev/ttyUSB1', '/dev/ttyUSB0']'
+[BNO055 @ arduino.py:285][DEBUG] 2017-10-28 07:11:12,531: /dev/ttyUSB2 is ready
+[BNO055 @ arduino.py:285][DEBUG] 2017-10-28 07:11:12,531: /dev/ttyUSB1 is ready
+[BNO055 @ arduino.py:285][DEBUG] 2017-10-28 07:11:12,532: /dev/ttyUSB0 is ready
+[BNO055 @ arduino.py:354][DEBUG] 2017-10-28 07:11:14,123: Checking 'whoareyou' protocol
+[BNO055 @ arduino.py:354][DEBUG] 2017-10-28 07:11:14,124: Checking 'whoareyou' protocol
+[BNO055 @ arduino.py:354][DEBUG] 2017-10-28 07:11:14,124: Checking 'whoareyou' protocol
+[BNO055 @ arduino.py:388][DEBUG] 2017-10-28 07:11:15,120: received packet: 'iamBNO055-IMU'
+[BNO055 @ arduino.py:398][DEBUG] 2017-10-28 07:11:15,427: Writing 'whoareyou' again
+[BNO055 @ arduino.py:398][DEBUG] 2017-10-28 07:11:15,427: Writing 'whoareyou' again
+[BNO055 @ arduino.py:398][DEBUG] 2017-10-28 07:11:16,028: Writing 'whoareyou' again
+[BNO055 @ arduino.py:317][DEBUG] 2017-10-28 07:11:16,176: Found ID 'BNO055-IMU'
+[BNO055 @ arduino.py:354][DEBUG] 2017-10-28 07:11:16,268: Checking 'init?' protocol
+[BNO055 @ arduino.py:398][DEBUG] 2017-10-28 07:11:16,388: Writing 'whoareyou' again
+[BNO055 @ arduino.py:398][DEBUG] 2017-10-28 07:11:16,764: Writing 'whoareyou' again
+[BNO055 @ arduino.py:388][DEBUG] 2017-10-28 07:11:16,764: received packet: 'init:'
+[BNO055 @ arduino.py:398][DEBUG] 2017-10-28 07:11:16,988: Writing 'whoareyou' again
+[BNO055 @ arduino.py:339][DEBUG] 2017-10-28 07:11:16,988: sent initialization data: ''
+[BNO055 @ arduino.py:121][WARNING] 2017-10-28 07:11:17,227: Didn't receive response for packet 'whoareyou' on address '/dev/ttyUSB1'. Operation timed out.
+[BNO055 @ arduino.py:136][INFO] 2017-10-28 07:11:17,227: address '/dev/ttyUSB2' has ID 'BNO055-IMU'
+[BNO055 @ arduino.py:398][DEBUG] 2017-10-28 07:11:17,588: Writing 'whoareyou' again
+[BNO055 @ arduino.py:398][DEBUG] 2017-10-28 07:11:18,188: Writing 'whoareyou' again
+[BNO055 @ arduino.py:121][WARNING] 2017-10-28 07:11:18,188: Didn't receive response for packet 'whoareyou' on address '/dev/ttyUSB0'. Operation timed out.
+[BNO055 @ arduino.py:86][INFO] 2017-10-28 07:11:18,293: configuring done. Finding whoiam=BNO055-IMU
+[BNO055 @ arduino.py:157][INFO] 2017-10-28 07:11:18,320: Device has started!
+[BNO055 @ arduino.py:158][INFO] 2017-10-28 07:11:18,321: init packet: 
+[BNO055 @ node.py:102][INFO] 2017-10-28 07:11:20,690: Node took 6.462618350982666s to run
+[BNO055 @ generic.py:64][INFO] 2017-10-28 07:11:20,693: Tearing down device

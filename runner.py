@@ -39,7 +39,7 @@ class BabyBuggy(Orchestrator):
             # "/dev/cu.usbserial"
             enabled=enable_lidar
         )
-        slam = Slam(map_size_pixels, map_size_meters, write_image=log, enabled=enable_lidar)
+        slam = Slam(map_size_pixels, map_size_meters, write_image=log, enabled=False)
         OpenCVCamera.ignore_capture_numbers(0)
         camera = OpenCVCamera(capture_number=1, enabled=enable_camera)
         recorder = OpenCVRecorder(video_file_name, video_directory, enabled=enable_video_recording)

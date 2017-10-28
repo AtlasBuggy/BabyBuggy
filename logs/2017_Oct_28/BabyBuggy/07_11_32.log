@@ -1,0 +1,26 @@
+[BabyBuggy @ factory.py:85][DEBUG] 2017-10-28 07:11:32,937: Logging to: logs/2017_Oct_28/BabyBuggy/07_11_32.log
+[BabyBuggy @ orchestrator.py:218][INFO] 2017-10-28 07:11:32,975: Consumer 'Slam' isn't enabled! Ignoring subscription to producer 'LMS200'
+[BabyBuggy @ orchestrator.py:244][INFO] 2017-10-28 07:11:32,975: 'OpenCVRecorder' is subscribing to 'OpenCVCamera' with the tag 'capture'
+[BabyBuggy @ orchestrator.py:108][DEBUG] 2017-10-28 07:11:32,976: Adding setup tasks. Apply subscriptions
+[BabyBuggy @ orchestrator.py:114][DEBUG] 2017-10-28 07:11:32,977: Running set up tasks (6). [<babybuggy.bno055.BNO055 object at 0x7fa227dba8>, <babybuggy.adafruit_gps.AdafruitGPS object at 0x7f81577eb8>, <lms200.lms200.LMS200 object at 0x7f81581978>, <atlasbuggy.opencv.camera.OpenCVCamera object at 0x7f8159dc50>, <atlasbuggy.opencv.recorder.OpenCVRecorder object at 0x7f8159ddd8>] and orchestrator setup
+[BabyBuggy @ orchestrator.py:68][INFO] 2017-10-28 07:11:32,978: setup
+[BabyBuggy @ orchestrator.py:143][DEBUG] 2017-10-28 07:11:40,255: Cancelling <Task finished coro=<Orchestrator.setup() done, defined at /usr/lib/python3.5/asyncio/coroutines.py:204> result=None>: False
+[BabyBuggy @ orchestrator.py:143][DEBUG] 2017-10-28 07:11:40,256: Cancelling <Task finished coro=<Arduino.setup() done, defined at /usr/local/lib/python3.5/dist-packages/atlasbuggy/device/arduino.py:52> result=None>: False
+[BabyBuggy @ orchestrator.py:143][DEBUG] 2017-10-28 07:11:40,256: Cancelling <Task finished coro=<Arduino.setup() done, defined at /usr/local/lib/python3.5/dist-packages/atlasbuggy/device/arduino.py:52> result=None>: False
+[BabyBuggy @ orchestrator.py:143][DEBUG] 2017-10-28 07:11:40,256: Cancelling <Task finished coro=<LMS200.setup() done, defined at /usr/local/lib/python3.5/dist-packages/lms200/lms200.py:70> result=None>: False
+[BabyBuggy @ orchestrator.py:143][DEBUG] 2017-10-28 07:11:40,257: Cancelling <Task finished coro=<OpenCVCamera.setup() done, defined at /usr/lib/python3.5/asyncio/coroutines.py:204> result=None>: False
+[BabyBuggy @ orchestrator.py:143][DEBUG] 2017-10-28 07:11:40,257: Cancelling <Task finished coro=<OpenCVRecorder.setup() done, defined at /usr/lib/python3.5/asyncio/coroutines.py:204> result=None>: False
+[BabyBuggy @ orchestrator.py:132][DEBUG] 2017-10-28 07:11:40,257: Adding loop tasks
+[BabyBuggy @ orchestrator.py:138][DEBUG] 2017-10-28 07:11:40,259: Running loop tasks (6)
+[BabyBuggy @ orchestrator.py:263][INFO] 2017-10-28 07:22:39,781: loop finished
+[BabyBuggy @ orchestrator.py:267][INFO] 2017-10-28 07:22:39,782: closing orchestrator
+[BabyBuggy @ orchestrator.py:161][DEBUG] 2017-10-28 07:22:39,783: 6 tasks to cancel
+[BabyBuggy @ orchestrator.py:143][DEBUG] 2017-10-28 07:22:39,783: Cancelling <Task cancelling coro=<Orchestrator.loop() running at /usr/local/lib/python3.5/dist-packages/atlasbuggy/orchestrator.py:73> wait_for=<Future finished result=True>>: True
+[BabyBuggy @ orchestrator.py:143][DEBUG] 2017-10-28 07:22:39,784: Cancelling <Task cancelling coro=<BNO055.loop() running at /media/nvidia/JetsonSSD/code/TestBed/babybuggy/bno055.py:133>>: True
+[BabyBuggy @ orchestrator.py:143][DEBUG] 2017-10-28 07:22:39,785: Cancelling <Task cancelling coro=<AdafruitGPS.loop() running at /media/nvidia/JetsonSSD/code/TestBed/babybuggy/adafruit_gps.py:98>>: True
+[BabyBuggy @ orchestrator.py:143][DEBUG] 2017-10-28 07:22:39,785: Cancelling <Task finished coro=<LMS200.loop() done, defined at /usr/local/lib/python3.5/dist-packages/lms200/lms200.py:111> result=None>: False
+[BabyBuggy @ orchestrator.py:143][DEBUG] 2017-10-28 07:22:39,786: Cancelling <Task cancelling coro=<OpenCVCamera.loop() running at /usr/local/lib/python3.5/dist-packages/atlasbuggy/opencv/camera.py:247>>: True
+[BabyBuggy @ orchestrator.py:143][DEBUG] 2017-10-28 07:22:39,786: Cancelling <Task cancelling coro=<OpenCVRecorder.loop() running at /usr/local/lib/python3.5/dist-packages/atlasbuggy/opencv/recorder.py:162> wait_for=<Future finished result=None>>: True
+[BabyBuggy @ orchestrator.py:89][INFO] 2017-10-28 07:22:39,787: halting
+[BabyBuggy @ orchestrator.py:92][INFO] 2017-10-28 07:22:39,787: Session took 666.8498368263245s to complete
+[BabyBuggy @ orchestrator.py:78][INFO] 2017-10-28 07:22:39,797: teardown

@@ -150,6 +150,7 @@ void loop()  // run over and over again
         }
         else if (status == 1) {  // stop event
             GPS.standby();
+            delay(50);
             useInterrupt(false);
             robot.changeBaud(DEFAULT_RATE);
         }
