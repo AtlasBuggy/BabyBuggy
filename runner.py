@@ -44,7 +44,7 @@ class BabyBuggy(Orchestrator):
         camera = OpenCVCamera(capture_number=1, enabled=enable_camera)
         recorder = OpenCVRecorder(video_file_name, video_directory, enabled=enable_video_recording)
 
-        # FIXME: order matters. Arduinos need to go first before LMS
+        # NOTE: order matters. Arduinos need to go first before LMS
         self.add_nodes(bno055, adafruit_gps, sicklms, camera, recorder, slam)
 
         self.subscribe(sicklms, slam, slam.lms_tag)
