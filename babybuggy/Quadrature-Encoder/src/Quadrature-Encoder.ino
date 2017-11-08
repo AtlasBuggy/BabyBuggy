@@ -5,7 +5,6 @@ Atlasbuggy robot("Quadrature-Encoder");
 Encoder encoder1(3, 4);
 
 long oldPosition = -1;
-unsigned long prev_time = millis();
 
 void setup() {
     robot.begin();

@@ -21,6 +21,8 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+
+*.log
 *.avi
 
 # PyInstaller

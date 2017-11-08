@@ -123,6 +123,7 @@ class BNO055(Arduino):
 
     async def loop(self):
         counter = 0
+        self.start()
         while self.device_active():
             while not self.empty():
                 packet_time, packets = self.read()
