@@ -52,10 +52,6 @@ class BabyBuggy(Orchestrator):
         self.add_nodes(bno055, adafruit_gps, encoder, sicklms, camera, recorder, slam)
 
         self.subscribe(sicklms, slam, slam.lms_tag)
-        self.subscribe(encoder, slam, slam.odometry_tag, message_converter=self.encoder_to_odometry_message)
         self.subscribe(camera, recorder, recorder.capture_tag)
-
-    def encoder_to_odometry_message(self, encoder_message):
-        OdometryMessage(encoder_message.timestamp, encoder_message.n, )
 
 run(BabyBuggy)
