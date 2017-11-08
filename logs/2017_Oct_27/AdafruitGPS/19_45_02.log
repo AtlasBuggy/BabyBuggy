@@ -1,4 +1,0 @@
-[AdafruitGPS @ factory.py:85][DEBUG] 2017-10-27 19:45:02,285: Logging to: logs/2017_Oct_27/AdafruitGPS/19_45_02.log
-[AdafruitGPS @ arduino.py:86][INFO] 2017-10-27 19:45:07,359: configuring done. Finding whoiam=Adafruit-GPS
-[AdafruitGPS @ node.py:102][INFO] 2017-10-27 19:47:03,692: Node took 1509148023.6923485s to run
-[AdafruitGPS @ generic.py:62][INFO] 2017-10-27 19:47:03,696: Tearing down device

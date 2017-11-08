@@ -1,5 +1,0 @@
-[OpenCVRecorder @ factory.py:85][DEBUG] 2017-10-28 06:59:43,699: Logging to: logs/2017_Oct_28/OpenCVRecorder/06_59_43.log
-[OpenCVRecorder @ recorder.py:46][INFO] 2017-10-28 06:59:43,699: Initialized video recorder. Path set to: videos/2017_Oct_28/BabyBuggy/06_59_43.avi
-[OpenCVRecorder @ node.py:102][INFO] 2017-10-28 06:59:51,005: Node took 7.306228399276733s to run
-[OpenCVRecorder @ recorder.py:101][INFO] 2017-10-28 06:59:51,129: dumping frame buffer. Size: 0
-[OpenCVRecorder @ recorder.py:125][DEBUG] 2017-10-28 06:59:51,130: Not dumping. Frame buffer has no frames. 

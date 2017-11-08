@@ -1,3 +1,0 @@
-[OpenCVCamera @ factory.py:85][DEBUG] 2017-10-28 06:51:24,025: Logging to: logs/2017_Oct_28/OpenCVCamera/06_51_24.log
-[OpenCVCamera @ camera.py:123][INFO] 2017-10-28 06:51:30,034: Loading capture '1'
-[OpenCVCamera @ node.py:102][INFO] 2017-10-28 06:51:31,629: Node took 7.603910207748413s to run
