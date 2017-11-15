@@ -26,6 +26,13 @@ class Odometry(Node):
         self.num_bno_messages = 0
         self.num_enc_messages = 0
 
+        self.odom_x = 0.0
+        self.odom_y = 0.0
+        self.odom_th = 0.0
+
+        self.odom_position_service = "odom_pos"
+        self.define_service(self.odom_position_service, tuple)
+
     def take(self):
         self.encoder_queue = self.encoder_sub.get_queue()
         self.bno055_queue = self.bno055_sub.get_queue()
@@ -73,7 +80,12 @@ class Odometry(Node):
 
                 message_num += 1
 
+                self.odom_th += odometry_message.delta_theta_degrees
+                self.odom_x += math.cos(math.radians(self.odom_th)) * odometry_message.delta_xy_mm
+                self.odom_y += math.sin(math.radians(self.odom_th)) * odometry_message.delta_xy_mm
+
                 self.log_to_buffer(time.time(), odometry_message)
+                self.broadcast_nowait((self.odom_x, self.odom_y, self.odom_th), self.odom_position_service)
                 await self.broadcast(odometry_message)
             else:
                 await asyncio.sleep(0.01)

@@ -1,5 +1,3 @@
-import math
-
 from atlasbuggy import Orchestrator, run
 from atlasbuggy.plotters import LivePlotter, PlotMessage
 
@@ -30,11 +28,7 @@ class BabyBuggy(Orchestrator):
         odometry = Odometry()
         slam = Slam(map_size_pixels, map_size_meters, write_image=True, enabled=True)
         plotter = LivePlotter()
-        odometry_plot_tag = plotter.add_plot("Odometry")
-
-        self.odom_x = 0.0
-        self.odom_y = 0.0
-        self.odom_th = 0.0
+        odometry_plot_tag = plotter.add_plot("Odometry", service=odometry.odom_position_service)
 
         self.add_nodes(bno055, adafruit_gps, encoder, sicklms, slam, odometry, plotter)
 
@@ -46,11 +40,9 @@ class BabyBuggy(Orchestrator):
 
         self.subscribe(odometry, plotter, odometry_plot_tag, self.plot_odometry)
 
-    def plot_odometry(self, odometry_message):
-        self.odom_th += odometry_message.delta_theta_degrees
-        self.odom_x += math.cos(math.radians(self.odom_th)) * odometry_message.delta_xy_mm
-        self.odom_y += math.sin(math.radians(self.odom_th)) * odometry_message.delta_xy_mm
-        return PlotMessage(self.odom_x, self.odom_y)
+    def plot_odometry(self, data):
+        x, y, th = data
+        return PlotMessage(x, y)
 
 
 run(BabyBuggy)
