@@ -8,14 +8,14 @@ from atlasbuggy.device import Arduino
 
 
 class AdafruitGPSMessage(Message):
-    message_regex = (
-        "lla: \((\d.*)([NESW]), (\d.*)([NESW]), (\d.*)([NESW])\);",
-        "lla degrees: \((\d.*), (\d.*)\);",
-        "speed: (\d.*), bearing: (\d.*);",
-        "fix: (\d*), quality: (\d*), satellites: (\d*);",
-        "time: (\d*):(\d*).(\d*) (\d*)/(\d*)/(\d*);",
-        "timestamp: (\d.*)",
-    )
+    message_regex = {
+        "lla": "lla: \((\d.*)([NESW]), (\d.*)([NESW]), (\d.*);",
+        "degrees": "lla degrees: \((\d.*), (\d.*)\);",
+        "speed": "speed: (\d.*), bearing: (\d.*);",
+        "fix": "fix: (\d*), quality: (\d*), satellites: (\d*);",
+        "time": "time: (\d*):(\d*).(\d*) (\d*)/(\d*)/(\d*);",
+        "timestamp": "timestamp: (\d.*)",
+    }
 
     def __init__(self, timestamp=None, n=None):
         super(AdafruitGPSMessage, self).__init__(timestamp, n)
@@ -45,7 +45,7 @@ class AdafruitGPSMessage(Message):
         self.satellites = 0
 
     def __str__(self):
-        string = "%s(" % (self.name)
+        string = "%s(" % self.name
         if self.fix:
             string += "lla: (%4.6f%s, %4.6f%s, %4.6f); " % (self.latitude[0], self.latitude[1],
                                                             self.longitude[0], self.longitude[1], self.altitude)
@@ -54,7 +54,7 @@ class AdafruitGPSMessage(Message):
 
         string += "fix: %s, quality: %i, satellites: %i; " % (self.fix, self.fix_quality, self.satellites)
         string += "time: %s:%s.%s %s/%s/%s; " % (self.hour, self.minute, self.seconds, self.day, self.month, self.year)
-        string += "timestamp: %s" % self.timestamp
+        string += "timestamp: %s)" % self.timestamp
         return string
 
     def calculate_timestamp(self):
@@ -64,8 +64,52 @@ class AdafruitGPSMessage(Message):
         self.timestamp = time.mktime(current_date.timetuple()) + current_date.microsecond / 1e3
 
     @classmethod
+    def match(cls, message_segment, message):
+        return re.match(cls.message_regex[message_segment], message)
+
+    @classmethod
     def parse(cls, message):
-        return None
+        lla_match = cls.match("lla", message)
+        degrees_match = cls.match("degrees", message)
+        speed_match = cls.match("speed", message)
+        fix_match = cls.match("fix", message)
+        time_match = cls.match("time", message)
+        timestamp_match = cls.match("timestamp", message)
+
+        new_message = cls()
+
+        if lla_match:
+            new_message.latitude = float(lla_match.group(1)), lla_match.group(2)
+            new_message.longitude = float(lla_match.group(3)), lla_match.group(4)
+            new_message.altitude = float(lla_match.group(5))
+
+        if degrees_match:
+            new_message.latitude_deg = float(degrees_match.group(1))
+            new_message.longitude_deg = float(degrees_match.group(2))
+
+        if speed_match:
+            new_message.speed = float(speed_match.group(1))
+            new_message.bearing = float(speed_match.group(2))
+
+        if fix_match:
+            new_message.fix = True if fix_match.group(1) == "True" else False
+            new_message.fix_quality = int(fix_match.group(2))
+            new_message.satellites = int(fix_match.group(3))
+
+        if time_match:
+            new_message.hour = int(fix_match.group(1))
+            new_message.minute = int(fix_match.group(2))
+            new_message.seconds = int(fix_match.group(3))
+            new_message.day = int(fix_match.group(4))
+            new_message.month = int(fix_match.group(5))
+            new_message.year = int(fix_match.group(6))
+
+        if timestamp_match:
+            timestamp = float(timestamp_match.group(1))
+            new_message.calculate_timestamp()
+            assert new_message.timestamp == timestamp
+
+        return new_message
 
 
 class AdafruitGPS(Arduino):
@@ -86,7 +130,7 @@ class AdafruitGPS(Arduino):
     async def loop(self):
         counter = 0
         self.start()
-        
+
         while self.device_active():
             while not self.empty():
                 packet_time, packets = self.read()

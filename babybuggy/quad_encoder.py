@@ -8,11 +8,10 @@ from atlasbuggy.device import Arduino
 
 
 class EncoderMessage(Message):
-    message_regex = r"EncoderMessage(t=(\d.*), n=(\d*), pt=%(\d.*) tick=(\d*), dist=(\d.*), ptick=(\d*), pdist=(\d.*))"
+    message_regex = r"EncoderMessage\(t=(\d.*), n=(\d*), pt=(\d.*), tick=(-\d*), dist=(-\d.*), ptick=(-\d*), pdist=(-\d.*)\)"
 
     def __init__(self, tick, dist_mm, prev_message=None, timestamp=None, n=None):
         super(EncoderMessage, self).__init__(timestamp, n)
-
 
         self.tick = tick
         self.dist_mm = dist_mm
@@ -31,12 +30,27 @@ class EncoderMessage(Message):
 
     def __str__(self):
         return "%s(t=%s, n=%s, pt=%s, tick=%s, dist=%s, ptick=%s, pdist=%s)" % (
-            self.name, self.timestamp, self.n, self.prev_timestamp, self.tick, self.dist_mm, self.prev_tick, self.prev_dist_mm
+            self.name, self.timestamp, self.n, self.prev_timestamp, self.tick, self.dist_mm, self.prev_tick,
+            self.prev_dist_mm
         )
 
     @classmethod
     def parse(cls, message):
-        return None
+        match = re.match(cls.message_regex, message)
+        if match is not None:
+            timestamp = float(match.group(1))
+            n = int(match.group(2))
+            prev_time = float(match.group(3))
+            tick = float(match.group(4))
+            dist = float(match.group(5))
+            prev_tick = float(match.group(6))
+            prev_dist = float(match.group(7))
+            prev_message = cls(prev_tick, prev_dist, timestamp=prev_time, n=n - 1)
+            message = cls(tick, dist, prev_message, timestamp, n)
+
+            return message
+        else:
+            return None
 
 
 class QuadEncoder(Arduino):

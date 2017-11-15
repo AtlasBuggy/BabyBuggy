@@ -2,9 +2,8 @@ import os
 import argparse
 
 from lms200 import Slam, LMS200
-from lms200.messages import OdometryMessage
 from atlasbuggy import Orchestrator, run
-from atlasbuggy.opencv import OpenCVCamera, OpenCVRecorder, OpenCVViewer
+from atlasbuggy.opencv import OpenCVCamera, OpenCVRecorder
 
 from babybuggy.adafruit_gps import AdafruitGPS
 from babybuggy.bno055 import BNO055
