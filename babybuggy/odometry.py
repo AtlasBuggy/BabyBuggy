@@ -30,10 +30,7 @@ class Odometry(Node):
     async def loop(self):
         message_num = 0
         odometry_message = OdometryMessage()
-        enc_updated = False
-        bno_updated = False
         prev_t = time.time()
-
 
         while True:
             enc_updated = not self.encoder_queue.empty()
@@ -54,7 +51,6 @@ class Odometry(Node):
                 if not enc_updated:
                     odometry_message.delta_t = bno055_message.timestamp - prev_t
                 prev_t = bno055_message.timestamp
-
             else:
                 odometry_message.delta_theta_degrees = 0.0
 
@@ -64,6 +60,7 @@ class Odometry(Node):
 
                 message_num += 1
 
+                # print(odometry_message.delta_t, odometry_message.delta_xy_mm, odometry_message.delta_theta_degrees)
                 await self.broadcast(odometry_message)
             else:
                 await asyncio.sleep(0.01)

@@ -13,8 +13,7 @@ class QuadEncoderPlayback(PlaybackNode):
     async def parse(self, line):
         message = EncoderMessage.parse(line.message)
         if message is not None:
-            print(message.dist_mm)
             await self.broadcast(message)
         else:
-            print("Message failed to parse:", line.message)
+            # print("Message failed to parse:", line.message)
             await asyncio.sleep(0.0)

@@ -4,8 +4,6 @@
 Atlasbuggy robot("Quadrature-Encoder");
 Encoder encoder1(3, 4);
 
-long oldPosition = -1;
-
 void setup() {
     robot.begin();
 }
@@ -15,7 +13,6 @@ void loop() {
         robot.readSerial();
         int status = robot.readSerial();
         if (status == 2) {  // start event
-            oldPosition = -1;
             encoder1.write(0);
         }
         // else if (status == 1) {  // stop event
@@ -26,12 +23,7 @@ void loop() {
         // }
     }
     if (!robot.isPaused()) {
-        encoder1.read();
-        long newPosition = encoder1.read();
-        if (newPosition != oldPosition) {
-            oldPosition = newPosition;
-            Serial.print(newPosition);
-            Serial.print('\n');
-        }
+        Serial.print(encoder1.read());
+        delay(25);
     }
 }

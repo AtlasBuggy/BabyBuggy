@@ -1,6 +1,5 @@
 import re
 import math
-import time
 import asyncio
 
 from atlasbuggy import Message
@@ -8,7 +7,7 @@ from atlasbuggy.device import Arduino
 
 
 class EncoderMessage(Message):
-    message_regex = r"EncoderMessage\(t=(\d.*), n=(\d*), pt=(\d.*), tick=(-\d*), dist=(-\d.*), ptick=(-\d*), pdist=(-\d.*)\)"
+    message_regex = r"EncoderMessage\(t=(\d.*), n=(\d*), pt=(\d.*), tick=(-?[0-9]\d*), dist=(-?[0-9]\d*\.\d+), ptick=(-?[0-9]\d*), pdist=(-?[0-9]\d*\.\d+)\)"
 
     def __init__(self, tick, dist_mm, prev_message=None, timestamp=None, n=None):
         super(EncoderMessage, self).__init__(timestamp, n)

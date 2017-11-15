@@ -14,7 +14,7 @@ class AdafruitGpsPlayback(PlaybackNode):
         message = AdafruitGPSMessage.parse(line.message)
         if message is not None:
             # self.logger.info("recovered: %s" % message)
-            print(message.latitude_deg, message.longitude_deg)
+            # print(message.latitude_deg, message.longitude_deg)
             await self.broadcast(message)
         else:
             print("Message failed to parse:", line.full)
