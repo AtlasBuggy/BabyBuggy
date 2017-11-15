@@ -1,0 +1,2 @@
+[OpenCVRecorder @ factory.py:85][DEBUG] 2017-11-15 17:49:12,263: Logging to: logs/2017_Nov_15/OpenCVRecorder/17_49_12.log
+[OpenCVRecorder @ recorder.py:46][INFO] 2017-11-15 17:49:12,263: Initialized video recorder. Path set to: videos/2017_Nov_15/BabyBuggy/17_49_12.avi

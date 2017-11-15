@@ -38,7 +38,7 @@ class BabyBuggy(Orchestrator):
         bno055 = BNO055(enabled=enable_arduinos)
         adafruit_gps = AdafruitGPS(enabled=enable_arduinos)
         encoder = QuadEncoder()
-        odometry = Odometry()
+        odometry = Odometry(enabled=True)
         sicklms = LMS200(
             "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller-if00-port0",
             # "/dev/cu.usbserial"

@@ -92,4 +92,7 @@ class QuadEncoder(Arduino):
 
     async def teardown(self):
         await super(QuadEncoder, self).teardown()
-        self.logger.info("Last measured distance: %smm (%s ticks)" % (self.message.dist_mm, self.message.tick))
+        if self.message is None:
+            self.logger.warning("No encoder messages received!!")
+        else:
+            self.logger.info("Last measured distance: %smm (%s ticks)" % (self.message.dist_mm, self.message.tick))

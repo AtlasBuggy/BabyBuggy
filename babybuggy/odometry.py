@@ -23,30 +23,43 @@ class Odometry(Node):
 
         self.prev_angle = 0.0
 
+        self.num_bno_messages = 0
+        self.num_enc_messages = 0
+
     def take(self):
         self.encoder_queue = self.encoder_sub.get_queue()
         self.bno055_queue = self.bno055_sub.get_queue()
 
     async def loop(self):
         message_num = 0
-        odometry_message = OdometryMessage()
         prev_t = time.time()
 
         while True:
+            odometry_message = OdometryMessage()
+
             enc_updated = not self.encoder_queue.empty()
             if enc_updated:
-                encoder_message = await self.encoder_queue.get()
-                odometry_message.delta_t = encoder_message.dt
-                odometry_message.delta_xy_mm = encoder_message.delta_arc
+                while not self.encoder_queue.empty():
+                    encoder_message = await self.encoder_queue.get()
+                    odometry_message.delta_t = encoder_message.dt
+                    odometry_message.delta_xy_mm = encoder_message.delta_arc
+
+                    self.num_enc_messages += 1
             else:
                 odometry_message.delta_t = 0.0
                 odometry_message.delta_xy_mm = 0.0
 
             bno_updated = not self.bno055_queue.empty()
             if bno_updated:
-                bno055_message = await self.bno055_queue.get()
-                odometry_message.delta_theta_degrees = math.degrees(bno055_message.euler.z - self.prev_angle)
-                self.prev_angle = bno055_message.euler.z
+                while not self.bno055_queue.empty():
+                    bno055_message = await self.bno055_queue.get()
+                    current_angle = math.degrees(bno055_message.euler.z)
+                    if current_angle - self.prev_angle > 180:
+                        current_angle -= 360
+                    odometry_message.delta_theta_degrees = current_angle - self.prev_angle
+                    self.prev_angle = current_angle
+
+                    self.num_bno_messages += 1
 
                 if not enc_updated:
                     odometry_message.delta_t = bno055_message.timestamp - prev_t
@@ -60,7 +73,10 @@ class Odometry(Node):
 
                 message_num += 1
 
-                # print(odometry_message.delta_t, odometry_message.delta_xy_mm, odometry_message.delta_theta_degrees)
+                self.log_to_buffer(time.time(), odometry_message)
                 await self.broadcast(odometry_message)
             else:
                 await asyncio.sleep(0.01)
+
+    async def teardown(self):
+        self.logger.info("%s BNO055 messages received. %s encoder messages received" % (self.num_bno_messages, self.num_enc_messages))
