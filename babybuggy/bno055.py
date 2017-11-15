@@ -92,7 +92,7 @@ class Bno055Message(Message):
         string += "%s: %s, " % (self.quat.name, self.quat.get_tuple(xyz=False))
 
         string += "status; sys: %s, a: %s, g: %s, m: %s)" % (
-            self.system_status, self.accel, self.gyro_status, self.mag_status)
+            self.system_status, self.accel_status, self.gyro_status, self.mag_status)
 
         return string
 

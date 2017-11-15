@@ -17,8 +17,8 @@ class BabyBuggy(Orchestrator):
         # self.set_default(level=30)
         super(BabyBuggy, self).__init__(event_loop)
 
-        file_name = "18_37_23.log"
-        directory = "logs/2017_Nov_08"
+        file_name = "17_48_33.log"
+        directory = "logs/2017_Nov_15"
 
         bno055 = BNO055Playback(file_name, directory)
         adafruit_gps = AdafruitGpsPlayback(file_name, directory)

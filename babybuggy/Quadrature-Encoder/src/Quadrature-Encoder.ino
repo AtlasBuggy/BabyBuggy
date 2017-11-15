@@ -24,6 +24,7 @@ void loop() {
     }
     if (!robot.isPaused()) {
         Serial.print(encoder1.read());
+        Serial.print('\n');
         delay(25);
     }
 }
