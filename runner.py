@@ -8,6 +8,7 @@ from atlasbuggy.opencv import OpenCVCamera, OpenCVRecorder
 from babybuggy.adafruit_gps import AdafruitGPS
 from babybuggy.bno055 import BNO055
 from babybuggy.quad_encoder import QuadEncoder
+from babybuggy.odometry import Odometry
 
 map_size_pixels = 1600
 map_size_meters = 50
@@ -23,7 +24,7 @@ enable_arduinos = True
 enable_camera = False
 enable_video_recording = log and enable_camera
 enable_lidar = True
-enabled_slam = False
+enabled_slam = True
 
 
 class BabyBuggy(Orchestrator):
@@ -37,6 +38,7 @@ class BabyBuggy(Orchestrator):
         bno055 = BNO055(enabled=enable_arduinos)
         adafruit_gps = AdafruitGPS(enabled=enable_arduinos)
         encoder = QuadEncoder()
+        odometry = Odometry()
         sicklms = LMS200(
             "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller-if00-port0",
             # "/dev/cu.usbserial"
@@ -48,9 +50,14 @@ class BabyBuggy(Orchestrator):
         recorder = OpenCVRecorder(video_file_name, video_directory, enabled=enable_video_recording)
 
         # NOTE: order matters. Arduinos need to go first before LMS
-        self.add_nodes(bno055, adafruit_gps, encoder, sicklms, camera, recorder, slam)
+        self.add_nodes(bno055, adafruit_gps, encoder, sicklms, camera, recorder, slam, odometry)
+
+        self.subscribe(encoder, odometry, odometry.encoder_tag)
+        self.subscribe(bno055, odometry, odometry.bno055_tag)
 
         self.subscribe(sicklms, slam, slam.lms_tag)
+        self.subscribe(odometry, slam, slam.odometry_tag)
+
         self.subscribe(camera, recorder, recorder.capture_tag)
 
 run(BabyBuggy)
