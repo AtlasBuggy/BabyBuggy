@@ -14,7 +14,7 @@ class BNO055Playback(PlaybackNode):
         message = Bno055Message.parse(line.message)
         if message is not None:
             # self.logger.info("recovered: %s" % message)
-            print(message.euler.get_tuple())
+            # print(message.euler.get_tuple())
             await self.broadcast(message)
         else:
             print("Message failed to parse:", line.message)
