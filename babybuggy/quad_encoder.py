@@ -40,10 +40,16 @@ class EncoderMessage(Message):
             timestamp = float(match.group(1))
             n = int(match.group(2))
             prev_time = float(match.group(3))
-            tick = float(match.group(4))
-            dist = float(match.group(5))
-            prev_tick = float(match.group(6))
-            prev_dist = float(match.group(7))
+            tick = int(match.group(4))
+            # dist = float(match.group(5))
+            dist = tick * QuadEncoder.ticks_to_mm
+            # assert dist == float(match.group(5)), "dist: tick=%s, %s != %s" % (tick, dist, match.group(5))
+
+            prev_tick = int(match.group(6))
+            # prev_dist = float(match.group(7))
+            prev_dist = prev_tick * QuadEncoder.ticks_to_mm
+            # assert prev_dist == float(match.group(7)), "prev dist: prev_tick=%s, %s != %s" % (prev_tick, prev_dist, match.group(7))
+
             prev_message = cls(prev_tick, prev_dist, timestamp=prev_time, n=n - 1)
             message = cls(tick, dist, prev_message, timestamp, n)
 
@@ -54,8 +60,8 @@ class EncoderMessage(Message):
 
 class QuadEncoder(Arduino):
     wheel_radius = 30.825
-    ticks_per_rotation = 1024
-    ticks_to_mm = wheel_radius * 2 * math.pi / ticks_per_rotation
+    ticks_per_rotation = 256
+    ticks_to_mm = wheel_radius * math.pi / ticks_per_rotation
 
     def __init__(self, enabled=True):
         self.message = None
@@ -79,13 +85,13 @@ class QuadEncoder(Arduino):
 
     def receive(self, packet_time, packet, packet_num):
         tick = int(packet)
+        tick -= self.start_tick
         dist_mm = tick * QuadEncoder.ticks_to_mm
 
         if self.start_tick is None:
             self.start_tick = tick
             self.logger.info("start tick value: %s" % self.start_tick)
 
-        tick -= self.start_tick
 
         self.message = EncoderMessage(tick, dist_mm, self.message, packet_time, packet_num)
         return self.message

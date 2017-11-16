@@ -49,7 +49,7 @@ class Odometry(Node):
                 while not self.encoder_queue.empty():
                     encoder_message = await self.encoder_queue.get()
                     odometry_message.delta_t = encoder_message.dt
-                    odometry_message.delta_xy_mm = encoder_message.delta_arc
+                    odometry_message.delta_xy_mm = -encoder_message.delta_arc
 
                     self.num_enc_messages += 1
             else:

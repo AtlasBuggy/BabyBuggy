@@ -17,6 +17,6 @@ class BNO055Playback(PlaybackNode):
             # print(message.euler.get_tuple())
             await self.broadcast(message)
         else:
-            print("Message failed to parse:", line.message)
+            # print("Message failed to parse:", line.message)
             # self.logger.info(line.full)
             await asyncio.sleep(0.0)
