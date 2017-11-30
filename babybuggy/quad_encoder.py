@@ -85,13 +85,13 @@ class QuadEncoder(Arduino):
 
     def receive(self, packet_time, packet, packet_num):
         tick = int(packet)
-        tick -= self.start_tick
-        dist_mm = tick * QuadEncoder.ticks_to_mm
 
         if self.start_tick is None:
             self.start_tick = tick
             self.logger.info("start tick value: %s" % self.start_tick)
 
+        tick -= self.start_tick
+        dist_mm = tick * QuadEncoder.ticks_to_mm
 
         self.message = EncoderMessage(tick, dist_mm, self.message, packet_time, packet_num)
         return self.message
